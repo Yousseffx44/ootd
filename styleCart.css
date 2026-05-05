@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #D4AF37; /* ذهبي */
+  --secondary-color: #444;
+  --background-color: #000;
+  --text-color: #fff;
+}
+ 
+.light-theme {
+  --primary-color: #00ff00;
+  --secondary-color: #444;
+  --background-color: #fff;
+  --text-color: #000;
+}
+body {
+  margin: 0;
+  font-family: "Tahoma", sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  background-image: url("ootd logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px 200px;
+  background-attachment: fixed;
+
+}
+
+button {
+  font-family: "Tahoma", sans-serif;
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  
+}
+button:hover {
+  background: #fff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background-color);
+  padding: 10px 20px;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  color: var(--primary-color);
+  
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  font-size: 23px;
+}
+.cart-items .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #111;
+}
+.cart-items .item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.cart-items .item .details {
+  flex: 1;
+  margin-left: 15px;
+  text-align: left;
+}
+.cart-items .item .details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.cart-items .item .details p {
+  margin: 5px 0;
+  color: var(--primary-color);
+}
+.cart-items .item .remove-btn {
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+.cart-items .item .remove-btn:hover {
+  background: #fff;
+}
+.cart-total {
+  text-align: right;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.checkout-button {
+  display: flex;
+  margin: 20px auto;
+  font-size: 18px;
+}
+.copyright {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
+}
+

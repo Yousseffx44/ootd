@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OOTD - cart</title>
+  <link rel="stylesheet" href="styleCart.css">
+  <script src="scriptCart.js" defer></script>
+</head>
+<body>
+  <header>
+    <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
+    <nav>
+      
+      <a href="index.html" class="logo">
+        <img src="ootd logo.png" alt="OOTD Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="p-index.html">Products</a></li>
+        <li><a href="offers (1).html">Offers</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact-1.html">Contact Us</a></li>
+        <li><a href="F-index.html">FAQ</a></li>
+        <li><a href="inspiration.html">Outfit Inspiration</a></li>
+      </ul>
+      <div class="cart-icon">
+        <button class="cart-button" >
+          <img src="shopping-cart.png" alt="Shopping Cart" width="20" height="20">
+          
+           
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="cart-section" id ="cartsection">
+      
+        <div class="cart-header">
+            <div class="cart-title">
+                <h2>Your Shopping Cart</h2>
+            </div>
+        </div>    
+          
+        
+            <div class="empty-cart">
+                <P>YOUR CART IS EMPTY</p>
+            </div>
+         
+        
+            <ul class="cart-items"></ul>
+        
+        
+        <div class="cart-total" id="carttotal" style="display:none">
+            <strong>Total: <span id="cart-amount">0.00</span> EGP</strong>
+            <button class="checkout-button" onclick="showCheckout()">PROCEED TO CHECKOUT</button>
+        </div>
+            
+           
+      
+    </div>
+
+    
+  
+    
+  </div>
+  
+  <footer class="copyright">
+    
+    <p>&copy; 2026 OOTD. All rights reserved.</p>
+  </footer>
+</body>
+</html>

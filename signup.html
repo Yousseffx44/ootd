@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="STYLE1.css">
+</head>
+<body>
+
+  <nav>
+    <!-- <a href="index.html">Home</a> -->
+    <a href="STYLE1.css">Contact Us</a>
+    <button id="theme-btn">Light Mode</button>
+  </nav>
+
+  <div class="form-container">
+    <h2>Sign Up</h2>
+
+    <form>
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+      <input type="submit" value="Create Account">
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <button id="go-login">Login</button>
+    </p>
+  </div>
+
+  <script>
+    let btn = document.getElementById("theme-btn");
+
+    btn.onclick = function() {
+      document.body.classList.toggle("light");
+
+      if (document.body.classList.contains("light")) {
+        btn.innerText = "Dark Mode";
+      } else {
+        btn.innerText = "Light Mode";
+      }
+    }
+
+    document.getElementById("go-login").onclick = function() {
+      window.location.href = "login.html";
+    }
+
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let username = form.username.value;
+      let password = form.password.value;
+      let confirm = form.confirm_password.value;
+
+      if(password !== confirm){
+        alert("Password not match");
+        return;
+      }
+
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+
+      alert("Account created successfully");
+
+      window.location.href = "login.html";
+    });
+  </script>
+
+</body>
+</html>
